@@ -1,0 +1,26 @@
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+div label {
+  color: #304ffe;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+div input {
+  width: 250px;
+  border: 1px gray solid;
+  color: grey;
+  border-radius: 5px;
+  padding: 10px;
+  direction: ltr !important;
+  font-size: 1rem;
+  height: 40px;
+}
+
+div input:focus {
+  border: 2px #304ffe solid;
+  outline: none;
+}
