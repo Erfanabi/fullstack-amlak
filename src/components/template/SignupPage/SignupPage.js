@@ -1,25 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Input from "@/element/Input";
 import "@/template/SignPage.css";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
 
 const SignupPage = () => {
   const router = useRouter();
-  const { status } = useSession();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
-
-  useEffect(() => {
-    if (status === "authenticated") router.replace("/");
-  }, [router, status]);
 
   const signupHandler = async (e) => {
     e.preventDefault();

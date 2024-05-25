@@ -9,8 +9,6 @@ import { useSession } from "next-auth/react";
 function Header() {
   const { data } = useSession();
 
-  console.log(data);
-
   return (
     <header className="header">
       <div>
@@ -26,7 +24,14 @@ function Header() {
 
       <div className="login">
         {data?.user ? (
-          <div style={{ display: "flex", alignItems: "end", gap: "15px" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "end",
+              gap: "15px",
+            }}
+          >
             <span>{data?.user?.email}</span>
             <Link href="/dashboard">
               <FaUserAlt />
