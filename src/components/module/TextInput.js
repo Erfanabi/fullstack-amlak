@@ -1,4 +1,4 @@
-import { e2p } from "@/utils/replaceNumber";
+import { p2e } from "@/utils/replaceNumber";
 import "./TextInput.css";
 
 function TextInput({
@@ -13,7 +13,7 @@ function TextInput({
 }) {
   const changeHandler = (e) => {
     const { name, value } = e.target;
-    setProfileData({ ...profileData, [name]: e2p(value) });
+    setProfileData({ ...profileData, [name]: p2e(value) });
   };
 
   return (

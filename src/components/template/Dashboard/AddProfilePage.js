@@ -5,7 +5,9 @@ import RadioList from "@/module/RadioList";
 import TextInput from "@/module/TextInput";
 import TextList from "@/module/TextList";
 import styles from "@/template/Dashboard/AddProfilePage.module.css";
+import axios from "axios";
 import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 function AddProfilePage() {
   const [profileData, setProfileData] = useState({
@@ -21,15 +23,28 @@ function AddProfilePage() {
     amenities: [],
   });
 
-  const submitHandler = () => {
+  const submitHandler = async () => {
     // console.log(new Date(value).toLocaleDateString("fa-IR"));
     // console.log(new Date(value).toISOString());
-    console.log(profileData);
+    // console.log(profileData);
+
+    try {
+      const res = await axios.post("/api/profile", profileData);
+      console.log(res.data);
+
+      if (res.data.error) {
+        toast.error(res.data.error);
+      } else {
+        toast.success(res.data.message);
+      }
+    } catch (err) {
+      toast.error(err.response.data.error);
+    }
   };
 
   return (
     <div className={styles.container}>
-      <h3>"ثبت آگهی"</h3>
+      <h3>ثبت آگهی</h3>
 
       <TextInput
         lable="عنوان آگهی"
@@ -96,6 +111,7 @@ function AddProfilePage() {
       <button className={styles.submit} onClick={submitHandler}>
         ثبت آگهی
       </button>
+      <Toaster />
     </div>
   );
 }

@@ -50,7 +50,7 @@ const SigninPage = () => {
         />
 
         <button type="submit" onClick={signinHandler}>
-          ثبت نام
+          ورود
         </button>
       </form>
       <p>
