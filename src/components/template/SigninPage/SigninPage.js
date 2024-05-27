@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Input from "@/element/Input";
+import Input from "@/module/Input";
 import "@/template/SignPage.css";
 import toast, { Toaster } from "react-hot-toast";
 import { signIn } from "next-auth/react";

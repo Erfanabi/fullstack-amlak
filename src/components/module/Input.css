@@ -1,15 +1,15 @@
-div {
+.input {
   display: flex;
   flex-direction: column;
 }
 
-div label {
+.input label {
   color: #304ffe;
   margin-bottom: 10px;
   font-weight: 400;
 }
 
-div input {
+.input input {
   width: 250px;
   border: 1px gray solid;
   color: grey;
@@ -20,7 +20,7 @@ div input {
   height: 40px;
 }
 
-div input:focus {
+.input input:focus {
   border: 2px #304ffe solid;
   outline: none;
 }

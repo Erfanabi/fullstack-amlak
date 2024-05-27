@@ -1,0 +1,44 @@
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input label {
+  color: #304ffe;
+  margin-bottom: 6px;
+  font-weight: 400;
+}
+
+.input span {
+  color: red;
+  margin-right: 4px;
+}
+
+.input input {
+  width: 250px;
+  border: 1px gray solid;
+  color: grey;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  height: 40px;
+}
+
+.input input:focus {
+  border: 2px #304ffe solid;
+  outline: none;
+}
+
+.input textarea {
+  border: 1px gray solid;
+  color: grey;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  width: 250px;
+}
+
+.input textarea:focus {
+  border: 2px #304ffe solid;
+  outline: none;
+}

@@ -1,0 +1,70 @@
+.item-list {
+  /* margin-bottom: 40px; */
+}
+
+.item-list p {
+  color: #304ffe;
+  margin-bottom: 6px;
+  font-weight: 400;
+}
+
+.item-list .add {
+  border: none;
+  background-color: #304ffe;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: all ease-in 0.1s;
+  cursor: pointer;
+  padding: 4px 8px;
+  display: flex;
+  margin-top: 10px;
+  width: fit-content;
+}
+
+.item-list .add svg {
+  color: #fff !important;
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+.item-list .add:hover {
+  transform: scale(1.05);
+}
+
+.form-input__list {
+  display: flex;
+  margin: 10px 0;
+  gap: 15px;
+}
+
+.form-input__list input {
+  width: 250px;
+  border: 1px gray solid;
+  color: grey;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  height: 40px;
+}
+
+.form-input__list input:focus {
+  border: 2px #304ffe solid;
+  outline: none;
+}
+
+.form-input__list button {
+  color: #db0505;
+  background-color: #fff;
+  border: 1px #db0505 solid;
+  display: flex;
+  align-items: center;
+  line-height: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: all ease-in 0.1s;
+  cursor: pointer;
+  padding: 4px 8px;
+  margin: 0;
+  width: fit-content;
+}

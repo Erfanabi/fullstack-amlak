@@ -1,0 +1,23 @@
+.data-picker p {
+  color: #304ffe;
+  margin-bottom: 6px;
+  font-weight: 400;
+}
+
+.data-picker-value {
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+  background-color: #304ffe18;
+  width: 130px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  color: #304ffe;
+  font-weight: 600;
+  /* margin-top: 20px; */
+}
+
+.data-picker-value:focus {
+  border: 2px #304ffe solid;
+  outline: none;
+}

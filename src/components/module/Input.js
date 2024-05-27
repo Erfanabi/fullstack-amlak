@@ -10,7 +10,7 @@ function Input({
   onChange,
 }) {
   return (
-    <div>
+    <div className="input">
       <label>
         {lable}
         <span>{required ? "*" : ""}</span>
