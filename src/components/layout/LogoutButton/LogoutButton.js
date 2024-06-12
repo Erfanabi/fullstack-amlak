@@ -10,7 +10,7 @@ const LogoutButton = () => {
   };
 
   return (
-    <button onClick={logOutHandler}>
+    <button className="logout-btn" onClick={logOutHandler}>
       <FiLogOut />
       خروج
     </button>

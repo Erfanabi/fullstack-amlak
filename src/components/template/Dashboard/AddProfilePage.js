@@ -22,6 +22,7 @@ function AddProfilePage() {
     rules: [],
     amenities: [],
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const submitHandler = async () => {
     // console.log(new Date(value).toLocaleDateString("fa-IR"));
@@ -29,16 +30,21 @@ function AddProfilePage() {
     // console.log(profileData);
 
     try {
+      setIsLoading(true);
       const res = await axios.post("/api/profile", profileData);
       console.log(res.data);
 
       if (res.data.error) {
         toast.error(res.data.error);
+        setIsLoading(false);
       } else {
         toast.success(res.data.message);
+        setIsLoading(false);
       }
     } catch (err) {
+      console.log(err);
       toast.error(err.response.data.error);
+      setIsLoading(false);
     }
   };
 
@@ -49,7 +55,6 @@ function AddProfilePage() {
       <TextInput
         lable="عنوان آگهی"
         name="title"
-        required
         profileData={profileData}
         setProfileData={setProfileData}
       />
@@ -57,35 +62,30 @@ function AddProfilePage() {
         type="textarea"
         lable="توضیحات"
         name="description"
-        required
         profileData={profileData}
         setProfileData={setProfileData}
       />
       <TextInput
         lable="آدرس"
         name="location"
-        required
         profileData={profileData}
         setProfileData={setProfileData}
       />
       <TextInput
         lable="شماره تماس"
         name="phone"
-        required
         profileData={profileData}
         setProfileData={setProfileData}
       />
       <TextInput
         lable="قیمت (تومان)"
         name="price"
-        required
         profileData={profileData}
         setProfileData={setProfileData}
       />
       <TextInput
         lable="بنگاه"
         name="realState"
-        required
         profileData={profileData}
         setProfileData={setProfileData}
       />
@@ -109,7 +109,7 @@ function AddProfilePage() {
       />
 
       <button className={styles.submit} onClick={submitHandler}>
-        ثبت آگهی
+        {isLoading ? "loading" : "ثبت آگهی"}
       </button>
       <Toaster />
     </div>

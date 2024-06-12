@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Input from "@/module/Input";
 import "@/template/SignPage.css";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
@@ -14,6 +14,7 @@ const SignupPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const signupHandler = async (e) => {
     e.preventDefault();
@@ -24,6 +25,7 @@ const SignupPage = () => {
     }
 
     try {
+      setIsLoading(true);
       const res = await axios.post("/api/auth/signup", {
         email,
         password,
@@ -31,9 +33,11 @@ const SignupPage = () => {
       if (res.status == 201) {
         toast.success(res.data.message);
         router.push("/signin");
+        setIsLoading(false);
       }
       console.log(res.data.message);
     } catch (err) {
+      setIsLoading(false);
       toast.error(err.response.data.error);
     }
   };
@@ -65,14 +69,13 @@ const SignupPage = () => {
         />
 
         <button type="submit" onClick={signupHandler}>
-          ثبت نام
+          {isLoading ? "loading" : "ثبت نام"}
         </button>
       </form>
       <p>
         حساب کاربری دارید؟
         <Link href="/signin">ورود</Link>
       </p>
-      <Toaster />
     </div>
   );
 };

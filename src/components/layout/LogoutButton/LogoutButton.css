@@ -1,4 +1,4 @@
-button {
+.logout-btn {
   display: flex;
   background: none;
   border: none;
@@ -11,7 +11,7 @@ button {
   font-weight: 600;
 }
 
-button svg {
+.logout-btn svg {
   font-size: 1.2rem !important;
   margin-left: 5px;
   color: rgb(219, 5, 5) !important;

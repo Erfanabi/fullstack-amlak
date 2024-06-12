@@ -6,7 +6,7 @@ function TextInput({
   placeholder,
   type = "text",
   children,
-  required,
+  required = true,
   name,
   profileData,
   setProfileData,
@@ -17,34 +17,36 @@ function TextInput({
   };
 
   return (
-    <div className="input">
-      <label htmlFor={name}>
-        {lable}
-        <span>{required ? "*" : ""}</span>
-      </label>
-      {type == "textarea" ? (
-        <textarea
-          placeholder={placeholder}
-          type={type}
-          autoComplete="on"
-          name={name}
-          id={name}
-          value={profileData[name]}
-          onChange={changeHandler}
-          rows="3"
-        ></textarea>
-      ) : (
-        <input
-          placeholder={placeholder}
-          type={type}
-          autoComplete="on"
-          name={name}
-          id={name}
-          value={profileData[name]}
-          onChange={changeHandler}
-        />
-      )}
-      {children}
+    <div className="text-input">
+      <div className="input">
+        <label htmlFor={name}>
+          {lable}
+          <span>{required ? "*" : ""}</span>
+        </label>
+        {type == "textarea" ? (
+          <textarea
+            placeholder={placeholder}
+            type={type}
+            autoComplete="on"
+            name={name}
+            id={name}
+            value={profileData[name]}
+            onChange={changeHandler}
+            rows="3"
+          ></textarea>
+        ) : (
+          <input
+            placeholder={placeholder}
+            type={type}
+            autoComplete="on"
+            name={name}
+            id={name}
+            value={profileData[name]}
+            onChange={changeHandler}
+          />
+        )}
+        {children}
+      </div>
     </div>
   );
 }

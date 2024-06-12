@@ -7,7 +7,7 @@ import connectDB from "@/utils/connectDB";
 const Dashboard = async () => {
   await connectDB();
   const session = await getServerSession(authOptions);
-  const user = await User.findOne({ email: session.user.email });
+  const user = await User.findOne({ email: session?.user?.email });
 
   return <DashboardPage user={user} />;
 };

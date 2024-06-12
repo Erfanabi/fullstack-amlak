@@ -5,7 +5,7 @@ import LogoutButton from "@/layout/LogoutButton/LogoutButton";
 
 const DashboardSidebar = ({ children, user }) => {
   return (
-    <div className="container">
+    <div className="das-layout-container">
       <div className="sidebar">
         <CgProfile />
         {/* {role === "ADMIN" ? "ادمین" : null} */}

@@ -25,3 +25,10 @@ textarea {
   font-family: inherit;
   /* ارث بری کنه */
 }
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

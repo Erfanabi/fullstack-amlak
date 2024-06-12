@@ -9,9 +9,7 @@ export const metadata = {
 
 export default async function DashboardLayout({ children }) {
   const session = await getServerSession(authOptions);
-
   if (!session) redirect("/");
-  console.log(session);
 
   return <DashboardSidebar user={session.user}>{children}</DashboardSidebar>;
 }

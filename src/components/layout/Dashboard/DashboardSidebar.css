@@ -1,10 +1,10 @@
-.container {
+.das-layout-container {
   display: flex;
   justify-content: space-between;
   margin: 70px 0px;
 }
 
-.sidebar {
+.das-layout-container .sidebar {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,19 +16,19 @@
   width: 230px;
 }
 
-.sidebar svg {
+.das-layout-container .sidebar svg {
   font-size: 3rem;
   color: #304ffe;
 }
 
-.sidebar p {
+.das-layout-container .sidebar p {
   color: grey;
   font-size: 1.1rem;
   font-weight: 400;
   margin-top: 20px;
 }
 
-.sidebar span {
+.das-layout-container .sidebar span {
   background-color: #304ffe;
   width: 100%;
   height: 1px;
@@ -37,22 +37,22 @@
   margin-bottom: 25px;
 }
 
-.sidebar a {
+.das-layout-container .sidebar a {
   margin: 10px 0;
   font-weight: 600;
   width: 100%;
 }
 
-.main {
+.das-layout-container .main {
   flex: 1;
 }
 
 @media (max-width: 900px) {
-  .sidebar {
+  .das-layout-container .sidebar {
     display: none;
   }
 
-  .main {
+  .das-layout-container .main {
     max-width: 100%;
   }
 }

@@ -9,6 +9,11 @@
   font-weight: 400;
 }
 
+.input label span {
+  color: red;
+  margin-right: 3px;
+}
+
 .input input {
   width: 250px;
   border: 1px gray solid;

@@ -1,0 +1,46 @@
+.text {
+  background-color: rgba(219, 5, 5, 0.159);
+  color: rgb(219, 5, 5);
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.cart-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+  row-gap: 40px;
+}
+
+.cart-btn {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cart-btn button {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 4px 15px;
+  font-size: 0.8rem;
+  flex: 1;
+}
+
+.cart-btn button svg {
+  font-size: 1.1rem;
+}
+
+.btn-edit {
+  color: green;
+  border: 1px solid green;
+}
+.btn-delete {
+  color: rgb(219, 5, 5);
+  border: 1px solid rgb(219, 5, 5);
+}

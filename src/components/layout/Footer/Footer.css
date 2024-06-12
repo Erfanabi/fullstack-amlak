@@ -10,23 +10,23 @@
   gap: max(7vw, 50px);
 }
 
-.desc {
+.footer .desc {
   width: 70%;
   text-align: justify;
   /* margin-left: 30px; */
 }
 
-.desc h3 {
+.footer .desc h3 {
   font-weight: 600;
   font-size: 1.4rem;
   margin-bottom: 10px;
 }
 
-.service {
+.footer .service {
   flex: 1;
 }
 
-.service ul {
+.footer .service ul {
   padding-right: 20px;
 }
 
@@ -36,7 +36,7 @@
     flex-direction: column;
   }
 
-  .desc {
+  .footer .desc {
     width: 100%;
   }
 }
