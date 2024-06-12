@@ -109,7 +109,7 @@ export async function PATCH(req) {
     } = await req.json();
 
     // authentication
-    const session = await getServerSession(req);
+    const session = await getServerSession(authOptions);
     if (!session) {
       return Response.json(
         {

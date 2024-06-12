@@ -6,10 +6,13 @@ import TextInput from "@/module/TextInput";
 import TextList from "@/module/TextList";
 import styles from "@/template/Dashboard/AddProfilePage.module.css";
 import axios from "axios";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
-function AddProfilePage() {
+function AddProfilePage({ data }) {
+  const router = useRouter();
+
   const [profileData, setProfileData] = useState({
     title: "",
     description: "",
@@ -23,6 +26,10 @@ function AddProfilePage() {
     amenities: [],
   });
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    if (data) setProfileData(data);
+  }, []);
 
   const submitHandler = async () => {
     // console.log(new Date(value).toLocaleDateString("fa-IR"));
@@ -40,6 +47,30 @@ function AddProfilePage() {
       } else {
         toast.success(res.data.message);
         setIsLoading(false);
+        router.push("/dashboard/my-profiles");
+        router.refresh();
+      }
+    } catch (err) {
+      console.log(err);
+      toast.error(err.response.data.error);
+      setIsLoading(false);
+    }
+  };
+
+  const editHandler = async () => {
+    try {
+      setIsLoading(true);
+      const res = await axios.patch("/api/profile", profileData);
+      console.log(res.data);
+
+      if (res.data.error) {
+        toast.error(res.data.error);
+        setIsLoading(false);
+      } else {
+        toast.success(res.data.message);
+        setIsLoading(false);
+        router.push("/dashboard/my-profiles");
+        router.refresh();
       }
     } catch (err) {
       console.log(err);
@@ -50,7 +81,7 @@ function AddProfilePage() {
 
   return (
     <div className={styles.container}>
-      <h3>ثبت آگهی</h3>
+      <h3>{data ? "ویرایش" : "ثبت آگهی"}</h3>
 
       <TextInput
         lable="عنوان آگهی"
@@ -108,9 +139,15 @@ function AddProfilePage() {
         setProfileData={setProfileData}
       />
 
-      <button className={styles.submit} onClick={submitHandler}>
-        {isLoading ? "loading" : "ثبت آگهی"}
-      </button>
+      {data ? (
+        <button className={styles.submit} onClick={editHandler}>
+          {isLoading ? "loading" : "ویرایش"}
+        </button>
+      ) : (
+        <button className={styles.submit} onClick={submitHandler}>
+          {isLoading ? "loading" : "ثبت آگهی"}
+        </button>
+      )}
       <Toaster />
     </div>
   );

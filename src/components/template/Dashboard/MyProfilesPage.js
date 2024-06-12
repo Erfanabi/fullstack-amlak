@@ -4,6 +4,8 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { FiEdit } from "react-icons/fi";
 import Cart from "@/module/Cart";
 import "./MyProfilePage.css";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 function MyProfilesPage({ profiles }) {
   const router = useRouter();
@@ -12,7 +14,22 @@ function MyProfilesPage({ profiles }) {
     router.push(`/dashboard/my-profiles/${id}`);
   };
 
-  const deleteHandler = () => {};
+  const deleteHandler = async (id) => {
+    try {
+      const res = await axios.delete(`/api/profile/delete/${id}`);
+      console.log(res.data);
+
+      if (res.data.error) {
+        toast.error(res.data.error);
+      } else {
+        toast.success(res.data.message);
+        router.refresh();
+      }
+    } catch (err) {
+      console.log(err);
+      toast.error(err.response.data.error);
+    }
+  };
 
   return (
     <div>
@@ -29,7 +46,10 @@ function MyProfilesPage({ profiles }) {
                 ویرایش
                 <FiEdit />
               </button>
-              <button className="btn-delete" onClick={deleteHandler}>
+              <button
+                className="btn-delete"
+                onClick={() => deleteHandler(item._id)}
+              >
                 حذف
                 <AiOutlineDelete />
               </button>
