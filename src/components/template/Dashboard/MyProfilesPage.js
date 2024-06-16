@@ -33,7 +33,7 @@ function MyProfilesPage({ profiles }) {
 
   return (
     <div>
-      {profiles.length ? null : <p className="text">هیچ آگهی ثبت نشده است</p>}
+      {profiles.length ? null : <p className="text-nothing">هیچ آگهی ثبت نشده است</p>}
 
       <div className="cart-container">
         {profiles.map((item) => (

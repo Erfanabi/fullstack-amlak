@@ -5,6 +5,24 @@ import { Types } from "mongoose";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../auth/[...nextauth]/route";
 
+export async function GET(req) {
+  try {
+    //   connectDB
+    await connectDB();
+
+    //   getProfiles
+    // ! تمام مدل های پروفایل رو برگردون و از توی اون ها یوزرآیدی رو حذف کن
+    const profiles = await Profile.find().select("-userId");
+    return Response.json({ data: profiles }, { status: 200 });
+  } catch (err) {
+    console.log(err);
+    return Response.json(
+      { message: "مشکلی در سرور رخ داده است" },
+      { status: 500 }
+    );
+  }
+}
+
 export async function POST(req) {
   try {
     //   connectDB

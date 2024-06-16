@@ -1,18 +1,3 @@
-.text {
-  background-color: rgba(219, 5, 5, 0.159);
-  color: rgb(219, 5, 5);
-  font-size: 1.1rem;
-  padding: 10px 15px;
-  border-radius: 10px;
-}
-
-.cart-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 30px;
-  row-gap: 40px;
-}
-
 .cart-btn {
   margin-top: 20px;
   display: flex;

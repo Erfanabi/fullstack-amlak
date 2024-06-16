@@ -32,3 +32,49 @@ button {
   outline: none;
   cursor: pointer;
 }
+
+.text-nothing {
+  background-color: rgba(219, 5, 5, 0.159);
+  color: rgb(219, 5, 5);
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+/* --- cart-container --- */
+.cart-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+  row-gap: 40px;
+}
+
+/* --- page-layout-container --- */
+.page-layout-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 0px;
+}
+
+.page-layout-container .sidebar {
+  height: fit-content;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: #304ffe4a 0px 4px 12px;
+  margin-left: 50px;
+  width: 210px;
+}
+
+.page-layout-container .main {
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .page-layout-container .sidebar {
+    display: none;
+  }
+
+  .page-layout-container .main {
+    max-width: 100%;
+  }
+}

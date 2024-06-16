@@ -1,0 +1,22 @@
+.buy-residential-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.buy-residential-sidebar p {
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.buy-residential-sidebar p svg {
+  margin-left: 5px;
+  font-size: 1.3rem;
+  color: #304ffe !important;
+}
+
+.buy-residential-sidebar a {
+  color: grey;
+  margin: 8px 5px;
+}
