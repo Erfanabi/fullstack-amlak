@@ -1,0 +1,124 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  padding: 10px;
+  margin: 50px 0;
+  gap: 80px;
+}
+
+/* --- home-services --- */
+.home-services {
+  width: 100%;
+  text-align: center;
+  color: #304ffe;
+}
+
+.home-services h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.home-services ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-services li {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  margin: 10px;
+  background-color: #bbdefb;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-services span {
+  font-weight: 400;
+  margin-right: 5px;
+  height: 20px;
+}
+
+/* --- home-categories --- */
+.home-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 30px;
+  row-gap: 40px;
+  margin-top: 10px;
+}
+
+/* --- home-city --- */
+.home-city {
+  margin: 20px 0;
+}
+
+.home-city h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  color: #304ffe;
+}
+
+.home-city ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 20px;
+  list-style: none;
+  margin-top: 50px;
+
+  /* display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  list-style: none;
+  gap: 10px;
+  row-gap: 20px;
+  justify-content: space-between;
+  align-items: center; */
+}
+
+.home-city li {
+  background-color: #bbdefb;
+  color: #304ffe;
+  font-size: 1.2rem;
+  /* width: 250px; */
+  /* margin: 10px 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.home-city span {
+  height: 30px;
+  margin-right: 15px;
+  font-weight: 400;
+}
+
+@media (max-width: 1000px) {
+  .home-categories {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-services h1 {
+    font-size: 2.5rem;
+  }
+
+  /* .categories {
+    justify-content: center;
+  } */
+
+  /* .home-city ul {
+    justify-content: center;
+  } */
+}
