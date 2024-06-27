@@ -1,7 +1,9 @@
-import { categories, cities, services } from "src/components/constants/strings";
 import { FiCircle } from "react-icons/fi";
 import { FaCity } from "react-icons/fa";
 import CategoryCard from "@/module/CategoryCard";
+import { categories } from "@/constants";
+import { services } from "@/constants";
+import { cities } from "@/constants";
 import "./HomePage.css";
 
 function HomePage() {

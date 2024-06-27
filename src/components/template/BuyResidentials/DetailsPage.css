@@ -1,0 +1,180 @@
+.details-page {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 0px;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-details {
+  margin-left: 0;
+  margin-right: 50px;
+  padding: 10px !important;
+  height: fit-content;
+  border-radius: 10px;
+  box-shadow: #304ffe4a 0px 4px 12px;
+  width: 210px;
+}
+
+.main-details {
+  flex: 1;
+}
+
+.main-details h1 {
+  color: #304ffe;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.main-details h3 {
+  color: #304ffe;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-bottom: 2px solid silver;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.main-details p {
+  text-align: justify;
+  margin-bottom: 50px;
+}
+
+.main-details ul {
+  padding-right: 20px;
+  margin-bottom: 50px;
+}
+
+.main-details li {
+  margin-bottom: 5px;
+}
+
+.main-details li::marker {
+  color: #304ffe;
+}
+
+.main-details span {
+  display: flex;
+  align-items: flex-start;
+  height: 15px;
+  margin-bottom: 50px;
+  color: grey;
+}
+
+.details-page span svg {
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
+.sidebar-details .realState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-details .realState svg {
+  font-size: 3rem;
+  color: #304ffe;
+  margin: 10px 0 20px;
+}
+
+.sidebar-details .realState p {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.sidebar-details .realState span {
+  display: flex;
+  align-items: center;
+  color: grey;
+  margin-top: 20px;
+}
+
+.sidebar-details .realState span svg {
+  font-size: 1.4rem;
+  margin: 0;
+  margin-left: 5px;
+  color: grey;
+}
+
+.sidebar-details .share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.sidebar-details .share button {
+  border: none;
+  background: none;
+  font-size: 1rem;
+  color: grey;
+  height: 20px;
+  transition: all ease-in 0.1s;
+  cursor: pointer;
+}
+
+.sidebar-details .share:hover button {
+  color: #304ffe;
+}
+
+.sidebar-details .share svg {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: #304ffe;
+}
+
+.sidebar-details .price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 0 !important;
+}
+
+.sidebar-details .price p {
+  display: flex;
+  align-items: center;
+  color: grey;
+  margin-bottom: 20px;
+  height: 20px;
+}
+
+.sidebar-details .price p svg {
+  font-size: 1.5rem;
+  margin-left: 5px;
+  color: #304ffe;
+}
+
+@media (max-width: 750px) {
+  .details-page {
+    flex-direction: column-reverse;
+  }
+
+  .sidebar-container {
+    display: grid !important;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+
+  .sidebar-details {
+    margin-right: 0;
+    display: block !important;
+    width: 100%;
+  }
+
+  .sidebar-details:nth-child(2) {
+    order: 3;
+  }
+}
+
+@media (min-width: 750px) {
+  .sidebar-details {
+    display: block;
+  }
+}

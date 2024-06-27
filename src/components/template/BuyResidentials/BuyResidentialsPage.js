@@ -9,9 +9,11 @@ async function BuyResidentialsPage({ data }) {
       </div>
 
       <div className="main">
-        {data ? null : <p className="text-nothing">هیچ آگهی ثبت نشده است</p>}
+        {data.length == 0 ? (
+          <p className="text-nothing">هیچ آگهی ثبت نشده است</p>
+        ) : null}
         <div className="cart-container">
-          {data.map((item) => (
+          {data?.map((item) => (
             <Cart item={item} key={item._id}></Cart>
           ))}
         </div>

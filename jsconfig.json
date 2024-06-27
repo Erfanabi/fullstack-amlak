@@ -11,7 +11,8 @@
       "@/layout/*": ["src/components/layout/*"],
       "@/module/*": ["src/components/module/*"],
       "@/template/*": ["src/components/template/*"],
-      "@/element/*": ["src/components/element/*"]
+      "@/element/*": ["src/components/element/*"],
+      "@/constants": ["src/components/constants/*"]
     }
   }
 }

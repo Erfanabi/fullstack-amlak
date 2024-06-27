@@ -1,21 +1,26 @@
 import BuyResidentialsPage from "@/template/BuyResidentials/BuyResidentialsPage";
-import axios from "axios";
 
-async function BuyResidentials(props) {
-  //   console.log(props.searchParams);
-
-  // بهتر است در کامپوننت های سرورساید از ای پی آی روت استفاده نکنیم ( این مورد حالت تمرینی دارد )
-  // چون ای پی آی رو ما خودمون در نکست نوشتیم و کامپوننت سرورساید هست و نیازی اینطوری عمل کنیم
-  // ما می تونیم مستقیم به دیتابیس کویری بزنیم
-  const { data } = await axios.get("http://localhost:3000/api/profile", {
-    caches: "no-store",
+async function BuyResidentials({ searchParams: { category } }) {
+  // console.log(searchParams.category);
+  const res = await fetch("http://localhost:3000/api/profile", {
+    cache: "no-store",
   });
+  const data = await res.json();
 
   if (data.error) return <h3>مشکلی پیش آمده است</h3>;
 
-  console.log(data.data);
+  let filterData = data.data;
+  if (category) {
+    filterData = data.data.filter((item) => {
+      return item.category == category;
+    });
+  }
 
-  return <BuyResidentialsPage data={data.data} />;
+  return <BuyResidentialsPage data={filterData} />;
 }
 
 export default BuyResidentials;
+
+// بهتر است در کامپوننت های سرورساید از ای پی آی روت استفاده نکنیم ( این مورد حالت تمرینی دارد )
+// چون ای پی آی رو ما خودمون در نکست نوشتیم و کامپوننت سرورساید هست و نیازی اینطوری عمل کنیم
+// ما می تونیم مستقیم به دیتابیس کویری بزنیم
