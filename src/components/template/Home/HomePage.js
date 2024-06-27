@@ -1,9 +1,9 @@
 import { FiCircle } from "react-icons/fi";
 import { FaCity } from "react-icons/fa";
 import CategoryCard from "@/module/CategoryCard";
-import { categories } from "@/constants";
-import { services } from "@/constants";
-import { cities } from "@/constants";
+import { categories } from "@/constants/strings";
+import { services } from "@/constants/strings";
+import { cities } from "@/constants/strings";
 import "./HomePage.css";
 
 function HomePage() {
