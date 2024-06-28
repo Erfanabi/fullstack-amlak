@@ -1,36 +1,65 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+<!-- ABOUT THE PROJECT -->
 
-First, run the development server:
+## About The Project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+✅ پروژه خرید و فروش املاک ✅
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+شما وارد حساب کاربری خودتون می شوید
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+می تونین ملک هایی که توسط دیگران به فروش گذاشته شده رو مشاهده کنید
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+و یا خودتون اگر ملکی برای فروش دارید به آن اضافه کنید
 
-## Learn More
+- [Demo Project](https://boto-amlak.liara.run/)
 
-To learn more about Next.js, take a look at the following resources:
+deploy in liara.ir
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+ 1. NextAuth
+ 2. Connection to DB
+ 3. mongoose
+ 4. react-hot-toast
+ 5. axios
+ 6. bcryptjs
+ 7. react-copy-to-clipboard
+ 8. react-icons
+ 9. react-loader-spinner
+ 10. react-multi-date-picker
 
-## Deploy on Vercel
+### Built With
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| `nextjs` | <img src="./icons/NextJS-Dark.svg" width="48"> |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Running locally in development mode
+
+To get started, just clone the repository and run `npm install && npm run dev`:
+
+    git clone https://github.com/Erfanabi/fullstack-amlak.git
+    npm install
+    npm run dev
+
+## Building and deploying in production
+
+If you wanted to run this site in production, you should install modules then build the site with `npm run build` and run it with `npm start`:
+
+    npm install
+    npm run build
+    npm start
+
+You should run `npm run build` again any time you make changes to the site.
+
+Note: If you are already running a webserver on port 80 (e.g. Macs usually have the Apache webserver running on port 80) you can still start the example in production mode by passing a different port as an Environment Variable when starting (e.g. `PORT=3000 npm start`).
+
+<!-- CONTACT -->
+
+## Contact
+
+Erfan Sharafi - [09105003119] - erfansharafi60@gmail.com
+
+Project Link: [https://github.com/Erfanabi/fullstack-amlak](https://github.com/Erfanabi/fullstack-amlak)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
