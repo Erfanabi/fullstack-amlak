@@ -151,7 +151,7 @@
   color: #304ffe;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 650px) {
   .details-page {
     flex-direction: column-reverse;
   }
@@ -173,7 +173,7 @@
   }
 }
 
-@media (min-width: 750px) {
+@media (min-width: 650px) {
   .sidebar-details {
     display: block;
   }

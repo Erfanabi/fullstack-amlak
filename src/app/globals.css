@@ -69,9 +69,15 @@ button {
   flex: 1;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 650px) {
+  .page-layout-container {
+    flex-direction: column;
+  }
+
   .page-layout-container .sidebar {
-    display: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 60px;
   }
 
   .page-layout-container .main {
