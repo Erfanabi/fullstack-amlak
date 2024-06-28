@@ -12,7 +12,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 و یا خودتون اگر ملکی برای فروش دارید به آن اضافه کنید
 
-- [Demo Project](https://boto-amlak.liara.run/)
+- ✅✅ [Demo Project](https://boto-amlak.liara.run/)
 
 deploy in liara.ir
 
